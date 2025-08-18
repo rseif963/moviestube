@@ -1,9 +1,14 @@
 const mongoose = require("mongoose");
+require("dotenv").config(); // load .env variables
 
-// moviestubeBackend
+const uri = process.env.MONGODB_URI; // get connection string from env
 
 mongoose
-   .connect('mongodb://localhost:27017/moviestubeBackend')
-   .then(() => console.log('DB connection successfull')).catch(err=>{
-    console.log(err)
-   });
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log(" DB connection successful"))
+  .catch((err) => {
+    console.error(" DB connection error:", err);
+  });
