@@ -6,7 +6,7 @@ const HomePage = ({sideNavbar}) =>{
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:4000/api/allVideo').then(res=>{
+        axios.get('https://moviestube-lime.vercel.app/').then(res=>{
             console.log(res.data.videos)
             setData(res.data.videos);
         }).catch(err=>{
