@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 
 app.use(cors({
-    origin: 'http://localhost:3000', // later replace with your frontend vercel URL
+    origin: 'https://moviestube-2hqr.vercel.app/', // later replace with your frontend vercel URL
     credentials: true
 }));
 
