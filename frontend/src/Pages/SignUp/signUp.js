@@ -43,7 +43,7 @@ const SignUp = () => {
     }
     const handleSignup = async () => {
         setProgressBar(true);
-        axios.post('http://localhost:4000/auth/signUp', signUpField).then((res) => {
+        axios.post('https://moviestube-lime.vercel.app/auth/signUp', signUpField).then((res) => {
             
             toast.success(res.data.message)
             setProgressBar(false)
